@@ -21,8 +21,13 @@ client.on("ready", () => {
     console.info(i18n.__("bot.started"));
 });
 
-if (config.run) {
-    client.login(config.tokens.main);
-}
-
-registerSlashCommands();
+// Run client after register slash commands
+registerSlashCommands()
+    .then(() => {
+        if (config.run) {
+            client.login(config.tokens.main);
+        }
+    })
+    .catch((err) => {
+        console.error(err);
+    });
