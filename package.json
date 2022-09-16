@@ -8,7 +8,7 @@
     "private": true,
     "scripts": {
         "version": "echo $npm_package_version",
-        "start": "ts-node --watch --project tsconfig.json index.ts"
+        "start": "ts-node --project tsconfig.json index.ts"
     },
     "devDependencies": {
         "@types/node": "^18.7.18",
