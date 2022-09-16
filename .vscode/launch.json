@@ -5,7 +5,7 @@
             "request": "launch",
             "name": "Launch Bot",
             "runtimeArgs": ["-r", "ts-node/register"],
-            "args": ["${workspaceFolder}/index.ts", "--esm"]
+            "args": ["${workspaceFolder}/index.ts"]
         }
     ]
 }
