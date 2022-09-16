@@ -1,0 +1,18 @@
+{
+    "todohighlight.keywords": [
+        "FIXME:",
+        "TODO:",
+        {
+            "text": "TODO:",
+            "backgroundColor": "#e8e8e8",
+            "color": "#ed3211"
+        }
+    ],
+    "todohighlight.defaultStyle": {
+        "backgroundColor": "#e8e8e8",
+        "color": "#ed3211",
+        "borderRadius": "2px",
+        "isWholeLine": false
+    },
+    "workbench.colorTheme": "Hyper Term Black"
+}
