@@ -2,7 +2,7 @@
 
 NAME: IntellCreatio
 
-Stack: TypeScript (ts-node), NodeJS (discord.js), ESLint, PostgreSQL (Prisma)
+Stack: TypeScript (ts-node), NodeJS (discord.js), ~~ESLint~~, PostgreSQL (Prisma)
 
 ==
 
