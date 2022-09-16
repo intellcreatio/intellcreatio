@@ -1,7 +1,6 @@
 {
     "todohighlight.keywords": [
         "FIXME:",
-        "TODO:",
         {
             "text": "TODO:",
             "backgroundColor": "#e8e8e8",

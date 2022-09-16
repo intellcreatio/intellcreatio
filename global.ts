@@ -1,23 +1,36 @@
+import process from "process";
+
+if (!process.config.variables.node_install_npm) {
+    console.error("Write in terminal please `yarn install`");
+    process.exit(1);
+}
+
+import * as dotenv from "dotenv";
+import config from "./config";
 import chalk from "chalk";
 
-const { error, info, log, debug, warn } = console;
+process.stdout.write(
+    chalk.white`Hello, while the bot starts I invite you to our Discord server https://discord.gg/epGhZ2sJXS ` +
+        chalk.redBright`♥` +
+        "\n"
+);
 
-console.error = (message?: any, ...optionalParams: any[]) => {
-    error(chalk.red(message), chalk.red(...optionalParams));
-};
+dotenv.config();
 
-console.info = (message?: any, ...optionalParams: any[]) => {
-    info(chalk.blue(message), chalk.blue(optionalParams));
-};
+declare global {
+    namespace NodeJS {
+        interface ProcessEnv {
+            DISCORD_TOKEN?: string;
+        }
+    }
+}
 
-console.log = (message?: any, ...optionalParams: any[]) => {
-    log(chalk.white(message), chalk.white(optionalParams));
-};
+if (!process.env.DISCORD_TOKEN) {
+    console.error(
+        "In .env file there is no token for authorization of Discord bot"
+    );
 
-console.debug = (message?: any, ...optionalParams: any[]) => {
-    debug(chalk.yellow(message), chalk.yellow(optionalParams));
-};
+    process.exit(1);
+}
 
-console.warn = (message?: any, ...optionalParams: any[]) => {
-    warn(chalk.gray(message), chalk.gray(optionalParams));
-};
+config.tokens.main = process.env.DISCORD_TOKEN;
