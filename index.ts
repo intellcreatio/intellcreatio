@@ -1,7 +1,8 @@
+import "./global";
 import { Client, Partials } from "discord.js";
 import config from "./config";
 import { ALL_INTENTS } from "./src/consts";
-import "./global";
+import { registerSlashCommands } from "./src/commands/register";
 
 const client = new Client({
     intents: ALL_INTENTS,
@@ -16,8 +17,12 @@ const client = new Client({
     ],
 });
 
-client.on("ready", (client) => {
-    console.info("bot started");
+client.on("ready", () => {
+    console.info(i18n.__("bot.started"));
 });
 
-client.login(config.tokens.main);
+if (config.run) {
+    client.login(config.tokens.main);
+}
+
+registerSlashCommands();

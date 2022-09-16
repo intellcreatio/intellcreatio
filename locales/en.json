@@ -1,0 +1,5 @@
+{
+    "bot.started": "Bot started",
+    "bot.refreshing_commands": "Started refreshing application (/) commands.",
+    "bot.successfully_reload_commands": "Successfully reloaded application (/) commands."
+}

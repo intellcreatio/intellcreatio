@@ -1,0 +1,7 @@
+{
+    "commands": {
+        "example": "~/interactions/commands/example.ts"
+    },
+    "buttons": {},
+    "select_menus": {}
+}
