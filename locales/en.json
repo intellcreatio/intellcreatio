@@ -2,5 +2,8 @@
     "bot.started": "Bot started",
     "bot.refreshing_commands": "Started refreshing application (/) commands.",
     "bot.successfully_reload_commands": "Successfully reloaded application (/) commands.",
-    "not_possible_error": "Not possible error"
+    "not_possible_error": "Not possible error",
+    "bot.attempt_violate": "Attempt to disturb bot by calling incorrect command, Snowflake of this user {snowflake}",
+    "bot.implementation_missing": "Sorry developer forgot about this command",
+    "bot.implement": "Command `{command}` implementationg is missing, please update `{file}` and add implementation"
 }

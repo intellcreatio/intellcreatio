@@ -16,6 +16,8 @@ i18n.configure({
     locales: ["en", "ru"],
     directory: path.join(process.cwd(), LOCALES_FOLDER_NAME),
     defaultLocale: config.locale,
+    fallbacks: { "en-*": "en" },
+    autoReload: true,
 });
 
 global.i18n = i18n;

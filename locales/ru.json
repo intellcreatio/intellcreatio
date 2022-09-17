@@ -2,5 +2,8 @@
     "bot.started": "Бот запущен",
     "bot.refreshing_commands": "Запущено обновление команд приложения (/).",
     "bot.successfully_reload_commands": "Успешно перезагрузил команды приложения (/).",
-    "not_possible_error": "Не возможная ошибка"
+    "not_possible_error": "Не возможная ошибка",
+    "bot.attempt_violate": "Попытка нарушения работы бота, вызвав неверную команду, Snowflake этого пользователя {snowflake}",
+    "bot.implementation_missing": "Извините но разработчик, ещё не успел добавить функционал",
+    "bot.implement": "Команда `{command}` не реализована, пожалуйста сделайте реализацию в файле `{file}`"
 }

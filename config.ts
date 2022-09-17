@@ -13,6 +13,7 @@ const config = {
         guild: "",
     },
     locale: "en",
+    devMode: true,
 };
 
 export default config;

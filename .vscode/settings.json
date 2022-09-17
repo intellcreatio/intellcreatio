@@ -13,5 +13,6 @@
         "borderRadius": "2px",
         "isWholeLine": false
     },
+    "typescript.validate.enable": true,
     "workbench.colorTheme": "Hyper Term Black"
 }

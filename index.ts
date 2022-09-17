@@ -3,6 +3,7 @@ import { Client, Partials } from "discord.js";
 import config from "./config";
 import { ALL_INTENTS } from "./src/consts";
 import { registerSlashCommands } from "./src/commands/register";
+import { handleCommands } from "./src/commands/handler";
 
 const client = new Client({
     intents: ALL_INTENTS,
@@ -22,11 +23,7 @@ client.on("ready", () => {
 });
 
 client.on("interactionCreate", (interaction) => {
-    if (!interaction.isChatInputCommand()) return;
-
-    if (interaction.commandName == "example") {
-        interaction.reply("command example used");
-    }
+    handleCommands(interaction);
 });
 
 // Run client after register slash commands

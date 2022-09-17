@@ -35,7 +35,7 @@ function parse() {
         }
     }
 
-    if (parsed == null) parsed = data;
+    parsed = data;
 
     return data;
 }
@@ -45,6 +45,10 @@ export function getInteractionsRouter(): InteractionsRouter {
     return parse();
 }
 
+fs.watchFile(path.join(process.cwd(), INTERACTIONS_ROUTER_FILE_NAME), () => {
+    registerSlashCommands();
+});
+
 export async function registerSlashCommands() {
     try {
         const routing = parse();
@@ -53,7 +57,7 @@ export async function registerSlashCommands() {
 
         routes.forEach((route) => {
             const command = require(route[1]).default as SlashCommandBuilder;
-            commands.push(command.toJSON());
+            commands.push(command.setName(route[0]).toJSON());
         });
 
         console.info(i18n.__("bot.refreshing_commands"));

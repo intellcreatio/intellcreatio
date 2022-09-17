@@ -2,6 +2,7 @@
     "commands": {
         "example": "~/interactions/commands/example.ts"
     },
+    "context_menus": {},
     "buttons": {},
     "select_menus": {}
 }
