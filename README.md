@@ -7,3 +7,7 @@ To configure the bot, you must refer to two files in this project, that is `conf
 **.env.example** - rename file to `.env` and configure the file.
 
 **config.ts** - This file is needed to fully configure the bot, you can also add those fields you want but be careful with those fields that already exist.
+
+# Locales
+
+Locales storage in folder `locales` it's you can change in `src/consts.ts` change value const `LOCALES_FOLDER_NAME` to yourself

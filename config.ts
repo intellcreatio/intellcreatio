@@ -12,7 +12,7 @@ const config = {
         registerInGuild: false,
         guild: "",
     },
-    locale: "ru",
+    locale: "en",
 };
 
 export default config;

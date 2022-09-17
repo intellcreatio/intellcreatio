@@ -1,5 +1,6 @@
 {
     "bot.started": "Бот запущен",
     "bot.refreshing_commands": "Запущено обновление команд приложения (/).",
-    "bot.successfully_reload_commands": "Успешно перезагрузил команды приложения (/)."
+    "bot.successfully_reload_commands": "Успешно перезагрузил команды приложения (/).",
+    "not_possible_error": "Не возможная ошибка"
 }

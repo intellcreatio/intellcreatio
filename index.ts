@@ -21,6 +21,14 @@ client.on("ready", () => {
     console.info(i18n.__("bot.started"));
 });
 
+client.on("interactionCreate", (interaction) => {
+    if (!interaction.isChatInputCommand()) return;
+
+    if (interaction.commandName == "example") {
+        interaction.reply("command example used");
+    }
+});
+
 // Run client after register slash commands
 registerSlashCommands()
     .then(() => {
