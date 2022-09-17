@@ -10,6 +10,8 @@ import { INTERACTIONS_ROUTER_FILE_NAME } from "../consts";
 import { InteractionsRouter } from "../types";
 import config from "../../config";
 
+let parsed: InteractionsRouter | null = null;
+
 // Parse interactions.json file
 function parse() {
     const data = JSON.parse(
@@ -33,7 +35,14 @@ function parse() {
         }
     }
 
+    if (parsed == null) parsed = data;
+
     return data;
+}
+
+export function getInteractionsRouter(): InteractionsRouter {
+    if (parsed != null) return parsed;
+    return parse();
 }
 
 export async function registerSlashCommands() {
