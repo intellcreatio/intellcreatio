@@ -11,10 +11,10 @@
             // compilerOptions specified here will override those declared below,
             // but *only* in ts-node.  Useful if you want ts-node and tsc to use
             // different options with a single tsconfig.json.
-            "resolveJsonModule": true
+            "resolveJsonModule": false
         }
     },
     "compilerOptions": {
-        "resolveJsonModule": true
+        "resolveJsonModule": false
     }
 }

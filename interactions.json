@@ -2,7 +2,10 @@
     "commands": {
         "example": "~/interactions/commands/example.ts"
     },
-    "context_menus": {},
+    "user_context_menu": {
+        "Log in Console": "~/interactions/context_menus/example.ts"
+    },
+    "message_context_menu": {},
     "buttons": {},
     "select_menus": {}
 }

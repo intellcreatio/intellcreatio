@@ -1,5 +1,9 @@
+type AnyStringKeyObject = { [key: string]: string };
+
 export interface InteractionsRouter {
-    commands: { [key: string]: string };
-    buttons: { [key: string]: string };
-    select_menus: { [key: string]: string };
+    commands: AnyStringKeyObject;
+    buttons: AnyStringKeyObject;
+    select_menus: AnyStringKeyObject;
+    user_context_menu: AnyStringKeyObject;
+    message_context_menu: AnyStringKeyObject;
 }

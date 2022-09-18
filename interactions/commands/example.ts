@@ -7,6 +7,5 @@ export const command = defineCommand(async (interaction) => {
 });
 
 export default new SlashCommandBuilder()
-    .setName("example")
     .setDMPermission(false)
     .setDescription("Example command");

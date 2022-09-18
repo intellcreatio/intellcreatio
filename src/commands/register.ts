@@ -1,4 +1,6 @@
 import {
+    ApplicationCommandType,
+    ContextMenuCommandBuilder,
     REST,
     RESTPostAPIApplicationCommandsJSONBody,
     Routes,
@@ -52,12 +54,41 @@ fs.watchFile(path.join(process.cwd(), INTERACTIONS_ROUTER_FILE_NAME), () => {
 export async function registerSlashCommands() {
     try {
         const routing = parse();
-        const routes = Object.entries(routing.commands);
+        const routesByCommands = Object.entries(routing.commands);
+        const routesByUserContextCommands = Object.entries(
+            routing.user_context_menu
+        );
+        const routesByMessageContextCommands = Object.entries(
+            routing.message_context_menu
+        );
+
         const commands: RESTPostAPIApplicationCommandsJSONBody[] = [];
 
-        routes.forEach((route) => {
+        routesByCommands.forEach((route) => {
             const command = require(route[1]).default as SlashCommandBuilder;
             commands.push(command.setName(route[0]).toJSON());
+        });
+
+        routesByUserContextCommands.forEach((route) => {
+            const command = require(route[1])
+                .default as ContextMenuCommandBuilder;
+            commands.push(
+                command
+                    .setName(route[0])
+                    .setType(ApplicationCommandType.User)
+                    .toJSON()
+            );
+        });
+
+        routesByMessageContextCommands.forEach((route) => {
+            const command = require(route[1])
+                .default as ContextMenuCommandBuilder;
+            commands.push(
+                command
+                    .setName(route[0])
+                    .setType(ApplicationCommandType.Message)
+                    .toJSON()
+            );
         });
 
         console.info(i18n.__("bot.refreshing_commands"));
