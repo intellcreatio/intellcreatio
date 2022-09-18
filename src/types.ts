@@ -1,4 +1,5 @@
-type AnyStringKeyObject = { [key: string]: string };
+export type AnyStringKeyObject = { [key: string]: string };
+export type If<C extends boolean, T, F> = C extends true ? T : F;
 
 export interface InteractionsRouter {
     commands: AnyStringKeyObject;
