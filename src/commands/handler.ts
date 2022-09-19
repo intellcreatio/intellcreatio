@@ -5,7 +5,7 @@ import {
     MessageContextMenuCommandInteraction,
     UserContextMenuCommandInteraction,
 } from "discord.js";
-import config, { RegisterInGuild } from "../../config";
+import config from "../../config";
 import { If } from "../types";
 import { getInteractionsRouter } from "./register";
 
@@ -437,6 +437,8 @@ export enum STATUS_COMMAND {
     // it's status be like undefined
     NOT_CORRECT,
 }
+
+export type RegisterInGuild = typeof config.commands.registerInGuild;
 
 type CommandImplementation = (
     interaction: If<

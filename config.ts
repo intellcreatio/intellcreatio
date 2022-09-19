@@ -3,8 +3,6 @@
  * config.tokens don't touch
  */
 
-export type RegisterInGuild = false;
-
 const config = {
     run: true,
     tokens: {
@@ -14,7 +12,7 @@ const config = {
         /**
          * This field is now in the RegisterInGuild type, change two fields if necessary
          */
-        registerInGuild: false,
+        registerInGuild: false as const,
         guild: "",
     },
     locale: "en",
