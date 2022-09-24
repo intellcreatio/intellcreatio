@@ -15,9 +15,6 @@ const config = {
         main: "",
     },
     commands: {
-        /**
-         * This field is now in the RegisterInGuild type, change two fields if necessary
-         */
         registerInGuild: FALSE,
         guild: "",
     },
