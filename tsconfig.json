@@ -11,10 +11,14 @@
             // compilerOptions specified here will override those declared below,
             // but *only* in ts-node.  Useful if you want ts-node and tsc to use
             // different options with a single tsconfig.json.
-            "resolveJsonModule": false
+            "resolveJsonModule": false,
+            "emitDecoratorMetadata": true,
+            "experimentalDecorators": true
         }
     },
     "compilerOptions": {
-        "resolveJsonModule": false
+        "resolveJsonModule": false,
+        "emitDecoratorMetadata": true,
+        "experimentalDecorators": true
     }
 }
