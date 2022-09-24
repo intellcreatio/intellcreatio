@@ -3,6 +3,12 @@
  * config.tokens don't touch
  */
 
+/**
+ * Use this consts for configuration
+ */
+const FALSE = false as const;
+const TRUE = true as const;
+
 const config = {
     run: true,
     tokens: {
@@ -12,7 +18,7 @@ const config = {
         /**
          * This field is now in the RegisterInGuild type, change two fields if necessary
          */
-        registerInGuild: false as const,
+        registerInGuild: FALSE,
         guild: "",
     },
     locale: "en",
