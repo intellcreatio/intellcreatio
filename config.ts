@@ -3,7 +3,11 @@
  * config.tokens don't touch
  */
 
-export type RegisterInGuild = false;
+/**
+ * Use this consts for configuration
+ */
+const FALSE = false as const;
+const TRUE = true as const;
 
 const config = {
     run: true,
@@ -14,7 +18,7 @@ const config = {
         /**
          * This field is now in the RegisterInGuild type, change two fields if necessary
          */
-        registerInGuild: false,
+        registerInGuild: FALSE,
         guild: "",
     },
     locale: "en",
