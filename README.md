@@ -11,3 +11,7 @@ To configure the bot, you must refer to two files in this project, that is `conf
 # Locales
 
 Locales storage in folder `locales` it's you can change in `src/consts.ts` change value const `LOCALES_FOLDER_NAME` to yourself
+
+# Database configuration (TypeORM)
+
+Locate in `database.config.ts`

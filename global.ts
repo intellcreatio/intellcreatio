@@ -12,6 +12,10 @@ import i18n from "i18n";
 import { LOCALES_FOLDER_NAME } from "./src/consts";
 import path from "path";
 
+import "reflect-metadata";
+import { DataSource } from "typeorm";
+import { DatabaseConfig } from "./database.config";
+
 i18n.configure({
     locales: ["en", "ru"],
     directory: path.join(process.cwd(), LOCALES_FOLDER_NAME),
@@ -37,6 +41,8 @@ declare global {
             DISCORD_CLIENT_ID: string;
         }
     }
+
+    var AppDataSource: DataSource;
 }
 
 if (!process.env.DISCORD_TOKEN) {
@@ -56,3 +62,9 @@ if (!process.env.DISCORD_CLIENT_ID) {
 }
 
 config.tokens.main = process.env.DISCORD_TOKEN;
+
+global.AppDataSource = new DataSource(DatabaseConfig);
+
+AppDataSource.initialize()
+    .then(() => {})
+    .catch((error) => console.log(error));
