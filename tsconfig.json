@@ -13,12 +13,14 @@
             // different options with a single tsconfig.json.
             "resolveJsonModule": false,
             "emitDecoratorMetadata": true,
-            "experimentalDecorators": true
+            "experimentalDecorators": true,
+            "strictPropertyInitialization": false
         }
     },
     "compilerOptions": {
         "resolveJsonModule": false,
         "emitDecoratorMetadata": true,
-        "experimentalDecorators": true
+        "experimentalDecorators": true,
+        "strictPropertyInitialization": false
     }
 }

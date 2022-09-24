@@ -15,3 +15,7 @@ Locales storage in folder `locales` it's you can change in `src/consts.ts` chang
 # Database configuration (TypeORM)
 
 Locate in `database.config.ts`
+
+## Entities
+
+Located at the root of the project in the `entities` folder, where you create models for the database and then connect these entities in `database.config.ts`

@@ -66,5 +66,9 @@ config.tokens.main = process.env.DISCORD_TOKEN;
 global.AppDataSource = new DataSource(DatabaseConfig);
 
 AppDataSource.initialize()
-    .then(() => {})
+    .then((d) => {
+        if (d.isInitialized) {
+            console.info(i18n.__("database.connected"));
+        }
+    })
     .catch((error) => console.log(error));
