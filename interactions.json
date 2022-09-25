@@ -6,6 +6,8 @@
         "Log in Console": "~/interactions/context_menus/example.ts"
     },
     "message_context_menu": {},
-    "buttons": {},
+    "buttons": {
+        "delete": "~/interactions/buttons/delete.ts"
+    },
     "select_menus": {}
 }
