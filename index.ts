@@ -4,6 +4,7 @@ import config from "./config";
 import { ALL_INTENTS } from "./src/consts";
 import { registerSlashCommands } from "./src/commands/register";
 import { handleCommands } from "./src/commands/handler";
+import { handleButtons } from "./src/buttons/register";
 
 const client = new Client({
     intents: ALL_INTENTS,
@@ -24,6 +25,7 @@ client.on("ready", () => {
 
 client.on("interactionCreate", (interaction) => {
     handleCommands(interaction);
+    handleButtons(interaction);
 });
 
 // Run client after register slash commands
